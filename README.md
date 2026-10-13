@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ⚽ Scouting Value Lab
 
 **¿Cuánto vale realmente un futbolista?** Un laboratorio de Machine Learning que aproxima valoraciones históricas publicadas y muestra por qué el rendimiento básico no explica todo el mercado.
@@ -59,7 +58,3 @@ No son valores actuales. Datos históricos reconstruidos desde un snapshot; pued
 Fuente: Transfermarkt vía [dcaribou](https://github.com/dcaribou/transfermarkt-datasets), mirror [ngeorgea](https://huggingface.co/datasets/ngeorgea/transfermarkt-player-scores). Datos upstream CC0; código del proyecto MIT. Ver [ficha del modelo](docs/MODEL_CARD.md) y [resultados](docs/RESULTS.md).
 
 Para reproducir las versiones usadas: `pip install -r requirements-lock.txt` y después `pip install -e . --no-deps`. El modelo serializado usa scikit-learn 1.8.0; el dashboard explora resultados CSV y no deserializa modelos.
-=======
-# scouting-value-lab
-⚽ Machine learning for historical football player market valuation, player similarity exploration, and temporal model evaluation. Includes an interactive Python dashboard.
->>>>>>> d29c30b96ddd85d0814baa48a153a8b889a56d09
