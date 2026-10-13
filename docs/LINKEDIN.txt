@@ -1,0 +1,31 @@
+⚽ ¿Cuánto vale realmente un futbolista? Construí un proyecto de Machine Learning para explorar esa pregunta.
+
+Scouting Value Lab aproxima valoraciones históricas publicadas a partir de edad, liga, minutos, goles y asistencias, junto a otros indicadores básicos anteriores a cada fecha de corte.
+
+La distinción es importante: no calcula el precio justo de un jugador ni el importe que un club debería pagar.
+
+Entrené modelos con registros de 2016–2022, seleccioné la configuración en 2023 y reservé 2024–2025 para la prueba final: 2.172 registros jugador-año.
+
+El resultado más interesante fue una lección sobre cómo evaluar Machine Learning:
+
+• Mediana global: error absoluto medio de €10,02 millones.
+• Edad y liga: €9,41 millones.
+• Modelo deportivo: €8,07 millones.
+• Conservar la última valoración conocida: €1,59 millones.
+
+El modelo mejora referencias simples de rendimiento, pero no supera la información del mercado anterior. Las referencias tienen distinta información disponible, por lo que ambas se muestran explícitamente.
+
+Una gran diferencia entre modelo y valoración no significa automáticamente “jugador infravalorado”. Puede revelar variables ausentes o errores del modelo.
+
+El proyecto incluye pipeline reproducible, validación temporal, bandas empíricas de incertidumbre, controles de datos y un dashboard para explorar comparables por perfil básico.
+
+Las comparaciones no incluyen defensa detallada, técnica o adecuación táctica; tampoco son recomendaciones de fichaje.
+
+Para mí, un proyecto sólido también debe mostrar cuándo un modelo no aporta la mejora que esperábamos.
+
+¿Qué variable histórica añadirías: contrato, lesiones, rendimiento defensivo o contexto del equipo?
+
+Datos: Transfermarkt vía dcaribou/transfermarkt-datasets y mirror ngeorgea; snapshot histórico, no cotizaciones actuales.
+https://github.com/dcaribou/transfermarkt-datasets
+
+#MachineLearning #DataScience #Python #FootballAnalytics #Scouting

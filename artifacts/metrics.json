@@ -1,0 +1,58 @@
+{
+  "selected_model": "hist_gradient_boosting",
+  "train_years": "2016\u20132022",
+  "validation_years": "2023",
+  "test_years": "2024\u20132025",
+  "n_train": 9028,
+  "n_validation": 1617,
+  "n_test": 2172,
+  "validation": {
+    "ridge": {
+      "mae_eur": 8273780.28367617,
+      "rmse_eur": 15628118.956016868,
+      "mae_log": 0.673283417816016,
+      "median_abs_pct_error": 49.0228645734292
+    },
+    "hist_gradient_boosting": {
+      "mae_eur": 8284195.93231927,
+      "rmse_eur": 15716395.95790318,
+      "mae_log": 0.6600214848798174,
+      "median_abs_pct_error": 48.94797442386687
+    }
+  },
+  "test_model": {
+    "mae_eur": 8073106.7982411,
+    "rmse_eur": 16638880.24802778,
+    "mae_log": 0.7138704826453882,
+    "median_abs_pct_error": 52.650766838257
+  },
+  "test_persistence": {
+    "mae_eur": 1587154.6961325966,
+    "rmse_eur": 3302962.7026506504,
+    "mae_log": 0.14915688351809314,
+    "median_abs_pct_error": 12.0
+  },
+  "test_global_median": {
+    "mae_eur": 10015791.896869244,
+    "rmse_eur": 20535774.662185475,
+    "mae_log": 0.931848623341157,
+    "median_abs_pct_error": 70.0
+  },
+  "band_nominal": 0.8,
+  "test_band_coverage": 0.7734806629834254,
+  "test_band_median_width_eur": 12852670.222918754,
+  "repeat_player_overlap_pct": 53.591160220994475,
+  "test_unseen_players_n": 1008,
+  "test_unseen_players": {
+    "mae_eur": 6724408.15211104,
+    "rmse_eur": 12644053.970124101,
+    "mae_log": 0.6548762730210282,
+    "median_abs_pct_error": 51.367125129151646
+  },
+  "test_age_league": {
+    "mae_eur": 9413044.680318967,
+    "rmse_eur": 19808420.690093115,
+    "mae_log": 0.833962629201808,
+    "median_abs_pct_error": 60.77143313868402
+  }
+}
