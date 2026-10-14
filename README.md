@@ -58,3 +58,11 @@ No son valores actuales. Datos históricos reconstruidos desde un snapshot; pued
 Fuente: Transfermarkt vía [dcaribou](https://github.com/dcaribou/transfermarkt-datasets), mirror [ngeorgea](https://huggingface.co/datasets/ngeorgea/transfermarkt-player-scores). Datos upstream CC0; código del proyecto MIT. Ver [ficha del modelo](docs/MODEL_CARD.md) y [resultados](docs/RESULTS.md).
 
 Para reproducir las versiones usadas: `pip install -r requirements-lock.txt` y después `pip install -e . --no-deps`. El modelo serializado usa scikit-learn 1.8.0; el dashboard explora resultados CSV y no deserializa modelos.
+
+## Caso de desarrollo de talento: Kimi Antonelli
+
+El dashboard incorpora una sección de storytelling sobre preparación, oportunidades y evaluación longitudinal del talento. Incluye una línea de tiempo editorial y puntos oficiales de fin de semana de 2025/2026. Es un complemento al laboratorio de evaluación, no un modelo de valoración de pilotos ni datos de entrenamiento del modelo de futbolistas.
+
+[Análisis y fuentes](docs/cases/kimi-antonelli.md) · [Gráfica](artifacts/kimi/timeline.png)
+
+La mejora de resultados no demuestra el efecto causal del acompañamiento; cambian coche, calendario y rivales. Corte: Singapur, 11 octubre 2026. El gráfico editorial y la foto incorporada se distribuyen bajo CC BY-SA 4.0, como se documenta en el caso; no bajo la licencia MIT del código.

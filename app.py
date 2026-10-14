@@ -10,7 +10,7 @@ st.warning('Las estimaciones no son precios justos. Una diferencia con el modelo
 def load():return pd.read_csv(R/'artifacts/test_predictions.csv'),json.loads((R/'artifacts/metrics.json').read_text())
 try:d,m=load()
 except FileNotFoundError:st.error('Ejecuta primero: python -m scouting_value_lab.pipeline --download');st.stop()
-view,validation,method=st.tabs(['Explorar jugadores','Validación temporal','Metodología'])
+view,validation,method,talent=st.tabs(['Explorar jugadores','Validación temporal','Metodología','Talento: caso Kimi'])
 with view:
  year=st.selectbox('Fecha de corte: 1 de junio',sorted(d.year.unique()),index=len(d.year.unique())-1)
  q=d[d.year==year].copy();q['label']=q.name+' · '+q.league+' · ID '+q.player_id.astype(str)
@@ -31,3 +31,16 @@ with validation:
  st.image(str(R/'artifacts/evaluation.png'))
 with method:
  st.markdown((R/'docs/MODEL_CARD.md').read_text())
+
+with talent:
+ st.subheader('Antes de exigir experiencia, alguien decidió ayudarle a construirla')
+ st.caption('Caso de desarrollo de talento: Kimi Antonelli. Complemento narrativo; no participa en el modelo de valoración de futbolistas.')
+ st.image(str(R/'artifacts/kimi/timeline.png'))
+ st.markdown('**2019:** programa junior · **2024:** oportunidad y accidente de Monza · **2025:** adaptación · **2026:** resultados tras Singapur.')
+ st.info('Una observación no explica una trayectoria. Esta analogía no demuestra que la formación causara la mejora: coche, rivales y contexto también influyen.')
+ points=pd.read_csv(R/'artifacts/kimi/weekend_points.csv')
+ shared=points[points['round']<=17].pivot(index='round',columns='year',values='weekend_points')
+ st.write('Puntos de fin de semana, incluidos sprints: primeras 17 rondas de cada año')
+ st.line_chart(shared)
+ st.download_button('Descargar datos de Kimi',points.to_csv(index=False),'kimi_weekend_points.csv','text/csv')
+ st.markdown((R/'docs/cases/kimi-antonelli.md').read_text())
